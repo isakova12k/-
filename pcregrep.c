@@ -1638,7 +1638,7 @@ while (ptr < endptr)
                   pcregrep_exit(2);
           }
           endptr = ptr;
-          strcpy(endptr, jfriedl_prefix); endptr += strlen(jfriedl_prefix);
+          strncpy(endptr, jfriedl_prefix, sizeof(endptr)-1); endptr += strlen(jfriedl_prefix);
           for (i = 0; i < jfriedl_XT; i++) {
                   strncpy(endptr, orig,  length);
                   endptr += length;
