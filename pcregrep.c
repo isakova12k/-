@@ -1643,7 +1643,7 @@ while (ptr < endptr)
                   strncpy(endptr, orig,  length);
                   endptr += length;
           }
-          strcpy(endptr, jfriedl_postfix); endptr += strlen(jfriedl_postfix);
+          strncpy(endptr, jfriedl_postfix, sizeof(endptr) - 1); endptr += strlen(jfriedl_postfix);
           length = newlen;
       }
 
