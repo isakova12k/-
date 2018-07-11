@@ -913,7 +913,7 @@ for (op = optionlist; op->one_char != 0; op++)
   else
     {
     if (op->one_char > 0) sprintf(s, "-%c,", op->one_char);
-      else strncpy(s, "   ", sizeof(s));
+      else strncpy(s, "   ", sizeof(s)-1);
     n = 31 - printf("  %s --%s", s, op->long_name);
     }
 
