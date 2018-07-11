@@ -2460,10 +2460,10 @@ sprintf(p, "%d", n);
 while (*p != 0) p++;
 switch (n%10)
   {
-  case 1: strcpy(p, "st"); break;
-  case 2: strcpy(p, "nd"); break;
-  case 3: strcpy(p, "rd"); break;
-  default: strcpy(p, "th"); break;
+  case 1: strncpy(p, "st", sizeof(p) - 1); break;
+  case 2: strncpy(p, "nd", sizeof(p) - 1); break;
+  case 3: strncpy(p, "rd", sizeof(p) - 1); break;
+  default: strncpy(p, "th", sizeof(p) - 1); break;
   }
 return buffer;
 }
